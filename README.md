@@ -2,7 +2,6 @@
 ## Các bước khởi chạy project
 ### Bước 1. Clone project này về và mở terminal lên copy & paste đoạn code phía dưới
 ```
-git clone https://github.com/huyfe/fullface_store.git && 
 cd fullface_store && 
 npm install
 ```
