@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models/database')
 var modelUser = require('../models/model_user');
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
+
 
 /* GET users listing. */
 router.get('/tai-khoan', function(req, res, next) {

@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: fullface_store
+      # Loại bỏ MYSQL_USER và MYSQL_PASSWORD vì bạn không thể tạo user root ở đây
+    ports:
+      - "3309:3306"  # Đổi cổng để tránh xung đột
+    volumes:
+      - db_data:/var/lib/mysql
+  app:
+    build: .
+    ports:
+      - "3013:3000"
+    environment:
+      DB_HOST: db
+      DB_USER: root  # Sử dụng user root
+      DB_PASSWORD: 123456
+      DB_NAME: fullface_store
+    depends_on:
+      - db
+volumes:
+  db_data:
