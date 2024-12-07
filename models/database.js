@@ -1,7 +1,8 @@
 var mysql = require('mysql');
 var db = mysql.createConnection({
-    host: 'host.docker.internal',
-    user: 'root',
+    //host: 'host.docker.internal',
+    
+    user: 'hoangyendethuong',
     password: '123456',
     database: 'fullface_shop'
 })
